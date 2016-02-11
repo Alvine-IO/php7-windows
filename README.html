@@ -23,6 +23,29 @@
 </ul><h2><a href="#missing-pecl-extensions" name="missing-pecl-extensions">missing pecl extensions</a></h2><p>environment x64 VC14 VisualStudio onwn compiled</p>
 <ul>
   <li>memcache</li>
+</ul><h2><a href="#build" name="build">build</a></h2><h3><a href="#memcache" name="memcache">memcache</a></h3><p>source: <a href="https://github.com/php/pecl-caching-memcache">https://github.com/php/pecl-caching-memcache</a></p>
+<pre><code>nmake clean
+buildconf
+configure ^
+--with-all-shared ^
+--disable-all ^
+--enable-cli  ^
+    --enable-memcache
+nmake
+</code></pre><h3><a href="#ssh2" name="ssh2">ssh2</a></h3><p>source: <a href="https://github.com/php/pecl-networking-ssh2">https://github.com/php/pecl-networking-ssh2</a></p>
+<pre><code>nmake clean
+buildconf
+configure ^
+--with-all-shared ^
+--disable-all ^
+--enable-cli  ^
+    --with-ssh2 ^
+--with-openssl
+nmake
+</code></pre><h1><a href="#see" name="see">see</a></h1>
+<ul>
+  <li><a href="https://wiki.php.net/internals/windows/stepbystepbuild">https://wiki.php.net/internals/windows/stepbystepbuild</a></li>
+  <li><a href="http://windows.php.net/downloads/php-sdk/">http://windows.php.net/downloads/php-sdk/</a></li>
 </ul> 
                     </div>
                 </div>

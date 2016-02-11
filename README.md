@@ -11,3 +11,42 @@ environment x64 VC14 VisualStudio onwn compiled
 
 + memcache
 
+
+## build
+
+
+### memcache
+
+source: https://github.com/php/pecl-caching-memcache
+
+    nmake clean
+    buildconf
+    configure ^
+    --with-all-shared ^
+	--disable-all ^
+	--enable-cli  ^
+        --enable-memcache
+    nmake
+
+
+### ssh2
+
+source: https://github.com/php/pecl-networking-ssh2
+
+
+    nmake clean
+    buildconf
+    configure ^
+    --with-all-shared ^
+	--disable-all ^
+	--enable-cli  ^
+        --with-ssh2 ^
+	--with-openssl
+    nmake
+    
+    
+    
+# see
+
++ https://wiki.php.net/internals/windows/stepbystepbuild
++ http://windows.php.net/downloads/php-sdk/
