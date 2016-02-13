@@ -14,6 +14,14 @@ environment x64 VC14 VisualStudio onwn compiled
 
 ## build
 
+    Windows development Console
+	"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64\vcvars64.bat"
+
+    nmake clean
+    buildconf --force
+    configure --with-all-shared --disable-all --enable-cli ...
+    nmake
+
 
 ### memcache
 

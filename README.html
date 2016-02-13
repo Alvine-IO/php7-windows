@@ -23,7 +23,12 @@
 </ul><h2><a href="#missing-pecl-extensions" name="missing-pecl-extensions">missing pecl extensions</a></h2><p>environment x64 VC14 VisualStudio onwn compiled</p>
 <ul>
   <li>memcache</li>
-</ul><h2><a href="#build" name="build">build</a></h2><h3><a href="#memcache" name="memcache">memcache</a></h3><p>source: <a href="https://github.com/php/pecl-caching-memcache">https://github.com/php/pecl-caching-memcache</a></p>
+</ul><h2><a href="#build" name="build">build</a></h2>
+<pre><code>nmake clean
+buildconf --force
+configure --with-all-shared --disable-all --enable-cli ...
+nmake
+</code></pre><h3><a href="#memcache" name="memcache">memcache</a></h3><p>source: <a href="https://github.com/php/pecl-caching-memcache">https://github.com/php/pecl-caching-memcache</a></p>
 <pre><code>nmake clean
 buildconf
 configure ^
