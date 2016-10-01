@@ -2,14 +2,15 @@
 
 ## existing windows dll
 
++ all http://windows.php.net/downloads/pecl/releases/
 + mongodb http://windows.php.net/downloads/pecl/releases/mongodb/1.1.2/php_mongodb-1.1.2-7.0-ts-vc14-x64.zip
 
-## build missing pecl extensions
+## build missing extensions
 
 environment x64 VC14 VisualStudio onwn compiled (steps see http://stackoverflow.com/questions/10084493/compiling-a-php-extension-as-non-thread-safe)
 
-    // Windows development Console
-    "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64\vcvars64.bat"
+    // Windows Developer Console (x64)
+    "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
 
     nmake clean
     buildconf --force
@@ -25,16 +26,12 @@ source: https://github.com/php/pecl-caching-memcache
 
     nmake clean
     buildconf
-    configure ^
-    --with-all-shared ^
-	--disable-all ^
-	--enable-cli  ^
-        --enable-memcache
+    configure --with-all-shared --disable-all --enable-cli --enable-memcache
     nmake 
     
 ### memcached
 
-source: https://github.com/php-memcached-dev/php-memcached
+memcached doesn´t work with windows, because memcached.lib doesn´t work with windows.
 
 ### ssh2
 
@@ -43,14 +40,8 @@ source: https://github.com/php/pecl-networking-ssh2
 
     nmake clean
     buildconf
-    configure ^
-    --with-all-shared ^
-	--disable-all ^
-	--enable-cli  ^
-        --with-ssh2 ^
-	--with-openssl
+    configure --with-all-shared --disable-all --enable-cli --with-ssh2 --with-openssl
     nmake
-    
     
     
 # see

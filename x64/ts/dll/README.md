@@ -1,1 +1,1 @@
-Don´t use this version, goto https://github.com/Alvine-IO/php7-windows/blob/master/7.0.3/x64/ts/dll/php_memcache.dll
+Don´t use this version, goto https://github.com/Alvine-IO/php7-windows/tree/master/7.0.3/x64
